@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from '../../app/store';
 
 export type Contact = {
     id: string,
@@ -14,7 +14,7 @@ export interface ContactState {
     status: 'idle' | 'editing' | 'failed';
 }
 
-export const initialState: ContactState = {
+const initialState: ContactState = {
     value: {
         id: '',
         firstName: '',
@@ -42,6 +42,6 @@ export const { createContact } = contactSlice.actions;
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectContact = (state: RootState) => state.counter.value;
+export const selectContact = (state: RootState) => state.contact.value;
 
 export default contactSlice.reducer;
