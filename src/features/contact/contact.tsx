@@ -18,7 +18,7 @@ export function ContactCard() {
                     id: '1',
                     firstName: 'Lewis',
                     lastName: 'Rogers',
-                    phone: '07943588596',
+                    phone: '12345678910',
                     work: false
                 }
             ))}>
